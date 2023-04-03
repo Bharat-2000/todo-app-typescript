@@ -7,9 +7,11 @@ import SingleTodo from './SingleTodo';
 type TodoListProps = {
     todos: Todo[],
     setTodos: React.Dispatch<React.SetStateAction<Todo[]>>,
+    completedTodos: Todo[],
+    setCompletedTodos:React.Dispatch<React.SetStateAction<Todo[]>>,
 }
 
-const TodoList: React.FC<TodoListProps> = ({ todos, setTodos }: TodoListProps) => {
+const TodoList: React.FC<TodoListProps> = ({ todos, setTodos, completedTodos, setCompletedTodos }: TodoListProps) => {
     return (
         <div className="todos">
             {
