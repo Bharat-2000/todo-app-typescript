@@ -21,7 +21,7 @@ const App: React.FC = () => {
 
 
   return (
-    // <DragDropContext >
+    <DragDropContext onDragEnd={() => {}}>
       <div className="App">
         <span className="heading">Todo - Task</span>
         <InputFeild todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
@@ -32,8 +32,8 @@ const App: React.FC = () => {
           setCompletedTodos={setCompletedTodos}
         />
       </div>
-    // </DragDropContext>
+    </DragDropContext>
   );
-}
+};
 
 export default App;
