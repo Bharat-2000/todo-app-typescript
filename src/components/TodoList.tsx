@@ -10,7 +10,7 @@ type TodoListProps = {
     setTodos: React.Dispatch<React.SetStateAction<Todo[]>>,
     completedTodos: Todo[],
     setCompletedTodos: React.Dispatch<React.SetStateAction<Todo[]>>,
-}
+};
 
 const TodoList: React.FC<TodoListProps> = ({ todos, setTodos, completedTodos, setCompletedTodos }: TodoListProps) => {
     return (
@@ -32,6 +32,7 @@ const TodoList: React.FC<TodoListProps> = ({ todos, setTodos, completedTodos, se
                                 setTodos={setTodos}
                             />
                         ))}
+                        {provided.placeholder}
                     </div>
                 )}
             </Droppable >
@@ -52,7 +53,9 @@ const TodoList: React.FC<TodoListProps> = ({ todos, setTodos, completedTodos, se
                                 setTodos={setCompletedTodos}
                             />
                         ))}
-                    </div>)}
+                        {provided.placeholder}
+                    </div>
+                )}
             </Droppable>
         </div>
     );

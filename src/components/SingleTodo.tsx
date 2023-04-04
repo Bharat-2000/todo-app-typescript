@@ -31,7 +31,8 @@ const SingleTodo = ({ todo, todos, setTodos, index }: SingleTodoProps) => {
 
     useEffect(() => {
         inputRef.current?.focus();
-    }, [edit])
+    }, [edit]);
+
 
     return (
         <Draggable draggableId={todo.id.toString()} index={index}>
