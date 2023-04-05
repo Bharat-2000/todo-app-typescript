@@ -30,6 +30,7 @@ const App: React.FC = () => {
           setTodos={setTodos}
           completedTodos={completedTodos}
           setCompletedTodos={setCompletedTodos}
+          setTodo={setTodo}
         />
       </div>
     </DragDropContext>

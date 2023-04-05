@@ -10,9 +10,10 @@ type SingleTodoProps = {
     todos: Todo[],
     setTodos: React.Dispatch<React.SetStateAction<Todo[]>>,
     index: number,
+    setTodo: React.Dispatch<React.SetStateAction<string>>,
 }
 
-const SingleTodo = ({ todo, todos, setTodos, index }: SingleTodoProps) => {
+const SingleTodo = ({ todo, todos, setTodos, index, setTodo }: SingleTodoProps) => {
     const inputRef = useRef<HTMLInputElement>(null);
     const [edit, setEdit] = useState<boolean>(false);
     const [editTodo, setEditTodo] = useState<string>(todo.todo);
